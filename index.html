@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amor Especial</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            color: #ff69b4;
+            margin-top: 50px;
+            font-size: 2rem;
+        }
+
+        p {
+            color: #555;
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 20px;
+        }
+
+        button {
+            background-color: #ff69b4;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #ff1493;
+        }
+
+        #splash {
+            display: none;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        #splash img {
+            max-width: 100%;
+            width: 200px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        #splash p {
+            color: #ff69b4;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            button {
+                font-size: 1rem;
+                padding: 12px 25px;
+            }
+
+            #splash img {
+                width: 150px;
+            }
+
+            #splash p {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Amor, aqui está um pouco do que sinto!</h1>
+    <p>Só consigo lembrar de você quando ouço essas músicas...<br>
+    Não sei se você vai entender meu ponto de vista, mas espero que compreenda que foi de coração.<br>
+    A cada dia, minha paixão se transforma em um amor ainda maior por você!</p>
+
+    <button id="moveButton">Descubra!</button>
+
+    <div id="splash">
+        <img src="CAPAS/imgflor.webp" alt="Caixinha de Presente">
+        <p>Pra você!</p>
+    </div>
+
+    <script>
+        document.getElementById('moveButton').addEventListener('click', function () {
+            // Exibe o splash
+            const splash = document.getElementById('splash');
+            splash.style.display = 'block';
+
+            // Após 3 segundos, redireciona para outra página
+            setTimeout(function () {
+                window.location.href = 'playlist.html'; // Substitua pelo link da nova página
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
